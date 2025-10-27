@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Federix Aryansyah</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-image: url('Halloween.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #ff7518;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      color: #ffbf00;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
+      font-size: 2.7em;
+    }
+
+    p {
+      max-width: 650px;
+      margin: 15px auto;
+      line-height: 1.7;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px;
+      border-radius: 10px;
+      color: #ffeccc;
+    }
+
+    button {
+      background-color: #ff7518;
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+
+    button:hover {
+      background-color: #ffa64d;
+      transform: scale(1.05);
+    }
+
+    #info {
+      margin-top: 25px;
+      font-weight: bold;
+      color: #ffbf00;
+      font-size: 1.2em;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    .emoji {
+      font-size: 50px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎃 Halloween hii hii hii 🎃</h1>
+
+  <p>Selamat datang di malam Halloween! Lilin menyala, labu bersinar, dan bayangan menari di sudut ruangan.</p>
+  <p>Setiap bisikan angin membawa misteri. Apakah itu suara daun… atau sesuatu yang lebih menyeramkan?</p>
+  <p>Beranikan dirimu untuk tetap di sini dan rasakan suasana malam paling mencekam tahun ini.</p>
+
+  <button onclick="ucapanHalloween()">Klik Jika Berani 👻</button>
+  <div id="info"></div>
+  <div class="emoji">🕯️🕸️</div>
+
+  <script>
+    function ucapanHalloween() {
+      const pesan = [
+        "👻 Boo! Jangan menoleh ke belakang...",
+        "🎃 Selamat Halloween! Waktunya berburu permen dan tawa menyeramkan!",
+        "🕷️ Hati-hati... sesuatu sedang memperhatikanmu.",
+        "🦇 Malam ini penuh dengan misteri dan cahaya lilin yang bergetar."
+      ];
+      const acak = Math.floor(Math.random() * pesan.length);
+      document.getElementById("info").textContent = pesan[acak];
+    }
+  </script>
+</body>
+</html>
